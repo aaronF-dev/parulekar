@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/parulekar hero.png";
+import heroImage from "@/assets/hero2.png";
 import SearchBar from "@/components/SearchBar";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";

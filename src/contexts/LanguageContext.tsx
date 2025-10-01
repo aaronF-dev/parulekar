@@ -13,7 +13,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   en: {
     // Hero Section
-    'hero.title': 'Parulekar Primary School',
+    'hero.title': 'Mohanrao Parulekar Primary School',
     'hero.subtitle': 'Where Curiosity Meets Excellence Leaders of Tomorrow Begin Here',
     'hero.enrollToday': 'Enroll Today',
     'hero.campusTour': 'Take a Campus Tour',
@@ -94,7 +94,7 @@ const translations = {
   },
   mr: {
     // Hero Section
-    'hero.title': 'परुलेकर प्राथमिक शाळा',
+    'hero.title': 'मोहनराव परुलेकर प्राथमिक शाळा',
     'hero.subtitle': 'जिथे कुतूहल आणि उत्कृष्टता भेटते — उद्याचे नेते इथेच सुरुवात करतात',
     'hero.enrollToday': 'आजच प्रवेश घ्या',
     'hero.campusTour': 'शाळा पहा',
