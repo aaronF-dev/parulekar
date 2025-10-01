@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Parulekar Primary School - Cinematic Design System */
+
+@layer base {
+  :root {
+    /* Core Colors - Deep Navy & Gold Luxury Palette */
+    --background: 0 0% 98%;
+    --foreground: 223 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 223 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 47% 11%;
+
+    /* Primary - Deep Blue Navy #112D4E */
+    --primary: 207 64% 19%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Warm Gold (Excellence) */
+    --secondary: 51 100% 50%;
+    --secondary-foreground: 223 47% 11%;
+
+    /* Muted - Soft Ivory */
+    --muted: 44 44% 96%;
+    --muted-foreground: 223 20% 45%;
+
+    /* Accent - Rich Maroon */
+    --accent: 355 65% 35%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 207 64% 19%;
+
+    /* Cinematic Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(207 64% 19%), hsl(207 44% 12%));
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%), hsl(45 100% 45%));
+    --gradient-premium: linear-gradient(180deg, hsl(207 64% 19%) 0%, hsl(355 65% 35%) 100%);
+    
+    /* Luxury Shadows */
+    --shadow-luxury: 0 25px 50px -12px hsl(207 64% 19% / 0.25);
+    --shadow-gold-glow: 0 0 40px hsl(51 100% 50% / 0.3);
+    --shadow-premium: 0 20px 40px -15px hsl(223 47% 11% / 0.15);
+
+    /* Animation Timings */
+    --transition-luxury: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-glow: all 0.3s ease-out;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 207 64% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 207 64% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 207 64% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 223 47% 11%;
+
+    --secondary: 207 48% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 207 48% 15%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 355 65% 45%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 48% 15%;
+    --input: 207 48% 15%;
+    --ring: 51 100% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Cinematic Typography */
+  .hero-title {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  .luxury-heading {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* Cinematic Animations */
+  .parallax-slow {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .glow-hover {
+    transition: var(--transition-glow);
+  }
+
+  .glow-hover:hover {
+    box-shadow: var(--shadow-gold-glow);
+  }
+
+  /* Premium Wave Divider */
+  .wave-divider {
+    position: relative;
+  }
+
+  .wave-divider::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg width='1200' height='60' viewBox='0 0 1200 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,60 C300,20 600,40 1200,0 L1200,60 Z' fill='%23fafafa'/%3E%3C/svg%3E") no-repeat center bottom;
+    background-size: cover;
+  }
+}
